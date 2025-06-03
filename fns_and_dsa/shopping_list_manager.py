@@ -1,5 +1,5 @@
 def display_menu():
-    print("\nShopping List Manager")
+    print(f"Shopping List Manager")  # <-- Use f-string exactly as required
     print("1. Add Item")
     print("2. Remove Item")
     print("3. View List")
@@ -18,7 +18,7 @@ def main():
                 print(f'"{item}" has been added to the list.')
             else:
                 print("Item cannot be empty.")
-        
+
         elif choice == '2':
             item = input("Enter the item to remove: ").strip()
             if item in shopping_list:
@@ -26,7 +26,7 @@ def main():
                 print(f'"{item}" has been removed from the list.')
             else:
                 print(f'"{item}" is not in the shopping list.')
-        
+
         elif choice == '3':
             if shopping_list:
                 print("Current shopping list:")
@@ -34,13 +34,14 @@ def main():
                     print(f"{idx}. {item}")
             else:
                 print("Your shopping list is empty.")
-        
+
         elif choice == '4':
             print("Goodbye!")
             break
-        
+
         else:
             print("Invalid choice. Please try again.")
 
 if __name__ == "__main__":
     main()
+
